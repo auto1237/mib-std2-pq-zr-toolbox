@@ -1,0 +1,166 @@
+# ======= 0~9 ======= #
+
+# > 12123
+^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery url reject-200
+# > 12306
+^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-analyze-echo-response https://github.com/ddgksf2013/Scripts/raw/master/12306.js
+
+# ======= A ======= #
+
+# > alibaba
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv\/ url reject-200
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ url reject
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/.*?\/v\d\/(version|top_notice\?|advert\?position=[^2]+) url reject-200
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/dsx\.php\/v\d\/advert\?position=[^2]+ url reject
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/dsx\.php\/v\d\/top_notice\? url reject
+^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/version url reject-200
+# > amdc
+^http:\/\/amdc\.m\.taobao\.com url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amdc.js
+
+# ======= B ======= #
+
+# > baiduditu
+^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/baidumap.js
+
+# ======= C ======= #
+
+# ======= D ======= #
+
+# ======= E ======= #
+
+# ======= F ======= #
+
+# ======= G ======= #
+
+# > 高德地图_底部tab栏角标@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/message\/notice\/list url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+# > 高德地图_路线规划下方广告@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? url reject-dict
+# > 高德地图_首页右中广告@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+# > 高德地图_附近页面@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/nearbyrec_smart url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+# > 高德地图_打车页面处理@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/promotion-web\/resource url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+# > 高德地图_Tip请求@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/boss\/order_web\/\w{8}_information url reject-200
+# > 高德地图_首页底部处理@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/main-page url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+# > 高德地图_通用广告请求@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/asa\/ads_attribution url reject
+# > 高德地图_开屏广告@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/valueadded\/alimama\/splash_screen url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+# > 高德地图_首页顶部推广@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/msgbox\/pull url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+# > 高德地图_我的页面@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+# > 高德地图_搜索框热词@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/new_hotword url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+# > 高德地图_搜索框scene@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
+# > 高德地图_首页左上角gif@ddgksf2013
+^https?:\/\/.*\.amap\.com\/uploadimg\/\w+\.gif url reject-img
+# > 高德地图_左下天气@ddgksf2013
+^https?:\/\/.*\.amap\.com\/ws\/valueadded\/weather url reject-dict
+
+# ======= H ======= #
+
+# ======= I ======= #
+
+# > iQiYi
+^https?:\/\/.*cupid\.iqiyi\.com\/mixer\? url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/iqiyi_open_ads.js
+^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do url reject
+^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show url reject
+^https?:\/\/intl\.iqiyi\.com\/ad_external\/ url reject
+^https?:\/\/intl\.iqiyi\.com\/video\/advertise url reject
+
+# ======= J ======= #
+
+# > jingdong
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts) url reject-200
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
+^https?://dsp-x.jd.com/adx/ url reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms) url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/jd_json.js
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=home_launchConfig url reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start url reject
+^https?:\/\/api\.m\.jd\.com\/openUpgrade url reject-dict
+^https?:\/\/img\d+\.360buyimg\.com\/jddjadvertise\/ url reject
+^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens url reject-200
+^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup url reject-200
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture url reject
+^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/(new)?na\/m\/adInfo url reject
+
+
+# ======= L ======= #
+
+# ======= M ======= #
+
+# > MoMo
+^https?:\/\/open\.taou\.com\/maimai\/launch_ad url reject-200
+^https?:\/\/api\.taou\.com\/sdk\/global\/splash_ad url reject-200
+^https?:\/\/track\.mm\.taou\.com/v\d\/track url reject-200
+
+# > miguyinyue
+^https?:\/\/app\.c\.nf\.migu\.cn\/.*column\/start(-)?up-pic url reject-200
+
+# ======= N ======= #
+
+# ======= O ======= #
+
+# ======= P ======= #
+
+# > pinduoduo
+^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash url reject-200
+
+# ======= Q ======= #
+
+# ======= R ======= #
+
+# ======= S ======= #
+
+# > spotify
+^https?://spclient.wg.spotify.com/(ad-logic|ads|.+ad_slot|.+banners|.+canvases|.+cards|.+crashlytics|.+doubleclick.net|.+enabled-tracks|.+promoted_offer) url reject-img
+^https?:\/\/api\d?\.musical\.ly\/api\/ad\/ url reject-img
+# > Soul
+^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report$ url reject-200
+
+# ======= T ======= #
+
+# > tianmaojingling
+^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig url reject-200
+# > testflight
+^https?:\/\/testflight\.apple\.com\/v2\/accounts\/.*\/apps\/\d*/builds/\d*/install url request-body storefrontId" : ".*" request-body storefrontId" : "143441-1,29"
+# > taobao
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get url reject-200
+
+# ======= U ======= #
+
+
+# ======= V ======= #
+
+# > v2ex
+^https?:\/\/.*v2ex\.com\/($|t\/\d+) url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/v2ex.js
+
+# ======= W ======= #
+
+# > WeChat110
+^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weixin110.js
+
+# ======= X ======= #
+
+# > xiangrikui
+^https?:\/\/client-api\.oray\.com\/materials\/SLCC_IOS_STARTUP\?lang=zh-Hans-CN url reject
+^https?:\/\/client-api-v2\.oray\.com\/materials\/(SLCC_IOS_STARTUP_ADV|SLCC_iOS_DEVICE_FREE|SLCC_iOS_DEVICE_LIST_ADV|SLCC_IOS_DEVICE_ADV|SUNLOGIN_CLIENT_IOS_PROMOTION|SLCC_IOS_DEVICE|SLCC_IOS_STARTUP) url reject
+
+# ======= Y ======= #
+
+# ======= Z ======= #
+
+# > zhongguoyidong
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject-200
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList url reject-200
+# > Zhihu
+^https?:\/\/api\.zhihu\.com\/commercial_api.*launch_v2 url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/zhihu_openads.js
+
+
+hostname = app.c.nf.migu.cn, mobads.baidu.com, guide-acs.m.taobao.com, entry.ubixioe.com, *.v2ex.com, client-api-v2.oray.com, *cupid.iqiyi.com, newclient.map.baidu.com, jdread-api.jd.com, ms.jr.jd.com, bdsp-x.jd.com, dsp-x.jd.com, api.m.jd.com, router-app-api.jdcloud.com, i.ys7.com, client-api.oray.com, ad.12306.cn, 103.91.210.141, sdk.alibaba.com.ailbaba.me, yunbusiness.ccb.com, client.app.coc.10086.cn, zconfig.alibabausercontent.com, api.pinduoduo.com, api.yangkeduo.com, slapi.oray.net, acs.m.taobao.com, security.wechat.com, weixin110.qq.com, ccsp-egmas.sf-express.com, gab.122.gov.cn, open.taou.com, api.taou.com, track.mm.taou.com, data-collector.soulapp.cn, 47.100.65.202, api.zhihu.com, 116.85.2.15, 116.85.2.14, testflight.apple.com, spclient.wg.spotify.com, *.amap.com, act.vip.iqiyi.com, iface.iqiyi.com, iface2.iqiyi.com, intl.iqiyi.com, u*.iqiyipic.com, bdsp-x.jd.com, ms.jr.jd.com, www.jd.com, jd.com
